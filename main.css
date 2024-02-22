@@ -1,0 +1,98 @@
+:root {
+    --dark-main-color: #181818;
+    --light-main-color: #ebebeb;
+}
+
+*,
+*:before,
+*:after {
+    box-sizing: border-box;
+    margin: 0;
+}
+
+@font-face {
+    font-family: "PP Neue Machina";
+    src: url("./fonts/PPNeueMachina-Regular.woff2") format("woff2");
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "PP Neue Machina";
+    src: url("./fonts/PPNeueMachina-RegularItalic.woff2") format("woff2");
+    font-weight: normal;
+    font-style: italic;
+    font-display: swap;
+}
+
+body {
+    background-color: var(--dark-main-color);
+    color: var(--light-main-color);
+    font-family: "PP Neue Machina";
+    font-size: 18px;
+}
+
+main {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    gap: 4rem;
+
+    padding: clamp(6px, 2%, 180px);
+}
+
+a {
+    color: var(--light-main-color);
+    text-decoration: none;
+}
+
+#anchor {
+    text-decoration: underline;
+}
+
+p {
+    line-height: 1.3;
+}
+
+section {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    padding: clamp(6px, 20em, 24px);
+
+    background-color: var(--light-main-color);
+    color: var(--dark-main-color);
+    border-radius: 16px;
+}
+
+section h1 {
+    font-size: 2rem;
+    word-break: break-word;
+    line-height: 1.2;
+}
+
+.introduction {
+    width: min(100%, 36rem);
+
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+    gap: 1rem;
+}
+
+.links {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+@media screen and (max-width: 1080px) {
+    .links {
+        grid-template-columns: 1fr;
+    }
+}
